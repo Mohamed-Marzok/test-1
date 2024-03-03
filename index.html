@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-family: "Open Sans", sans-serif;
+    }
+    :root {
+      --main-color: #4721ad;
+      --2nd-color: #f13c3c;
+      --2nd-color-hover: #f43177;
+      --3rd-color: #f48c06;
+    }
+    @media (max-width: 768px) {
+      .header-description {
+        display: none;
+      }
+    }
+    .btn:hover {
+      background-color: white !important;
+      color: black;
+    }
+    form label {
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <form class="shadow-lg p-3 mt-5 mb-5">
+        <fieldset>
+          <div class="mb-4">
+            <legend
+              class="mb-0"
+              style="
+                color: var(--3rd-color);
+                font-size: 32px;
+                font-weight: bold;
+              "
+            >
+              Test Information
+            </legend>
+            <p class="header-description" style="color: #777; font-size: 14px">
+              Type a name for a test . this is required field. The name is the
+              title text that appears in the content area. Use a descriptive
+              name to help user identify the test.
+            </p>
+          </div>
+          <div class="mb-3" style="width: 20%">
+            <label for="testName" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="testName"
+              placeholder="Midterm"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="testDescription" class="form-label">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="testDescription"
+              placeholder="Midterm For Fall 2023"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="testInstructions" class="form-label"
+              >Instructions</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="testInstructions"
+              placeholder="Please answer all questions."
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="testDate" class="form-label">Date</label>
+            <input
+              type="text"
+              class="form-control"
+              id="testDate"
+              placeholder=" 25-September-2024"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="testTime" class="form-label">Time</label>
+            <input
+              type="text"
+              class="form-control"
+              id="testTime"
+              placeholder=" From:  9 AM  To   1 PM"
+            />
+          </div>
+
+          <div class="row mt-0">
+            <div class="col-3">
+              <label for="testTotalPoints" class="form-label"
+                >Total Points</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="testTotalPoints"
+                placeholder="First name"
+                value="150"
+              />
+            </div>
+            <div class="col-3">
+              <label for="testTotalQuestions" class="form-label"
+                >Total Questions</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="testTotalQuestions"
+                placeholder="Last name"
+                value="50"
+              />
+            </div>
+          </div>
+
+          <div
+            class="btn-group mt-3"
+            style="display: flex; justify-content: flex-end; gap: 15px"
+          >
+            <button
+              type="button"
+              class="btn btn-success"
+              style="
+                width: 100px;
+                flex-grow: 0;
+                background-color: var(--main-color);
+                border: 3px solid var(--main-color);
+              "
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              style="
+                width: 100px;
+                flex-grow: 0;
+                background-color: var(--2nd-color);
+                border: 3px solid var(--2nd-color);
+              "
+            >
+              Cancel
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
